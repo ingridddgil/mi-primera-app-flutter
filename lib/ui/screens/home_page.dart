@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_demo/ui/screens/progress_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -7,11 +7,46 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 220, 152, 175),
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       body: Center (
-        child: Text(
-          'This is Google Fonts',
-          // style: GoogleFonts.bitcountGridDoubleInk(),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Image.asset(
+              'assets/icons/ayasa_logo.png',
+              width: 300,
+              height: 300,
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromARGB(255, 139, 21, 16),
+                foregroundColor: Colors.white,
+                padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30),
+                ),
+              ),
+              onPressed: () {   
+                Navigator.push( 
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ProgressPage(),
+                  ),
+                );
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('Botón presionado ')),
+                );
+              },
+              child: const Text(
+                'Iniciar sesión',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  )
+                ) 
+              ),
+          ]
         ),
 
       )
