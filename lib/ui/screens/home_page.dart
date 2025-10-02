@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/ui/screens/progress_page.dart';
+// import 'package:flutter_demo/ui/screens/progress_page.dart';
+import 'package:flutter_demo/ui/screens/test_page.dart';
+imp
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -13,14 +15,14 @@ class HomePage extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Image.asset(
-              'assets/icons/ayasa_logo.png',
+              'assets/images/logo.webp',
               width: 300,
               height: 300,
-            ),
+            ), 
             const SizedBox(height: 20),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color.fromARGB(255, 139, 21, 16),
+                backgroundColor: const Color(0xFF8B1E04),
                 foregroundColor: Colors.white,
                 padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
                 shape: RoundedRectangleBorder(
@@ -31,7 +33,7 @@ class HomePage extends StatelessWidget {
                 Navigator.push( 
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const ProgressPage(),
+                    builder: (context) => const TestPage(),
                   ),
                 );
                 ScaffoldMessenger.of(context).showSnackBar(
