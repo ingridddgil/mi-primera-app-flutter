@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter_demo/ui/screens/progress_page.dart';
-import 'package:flutter_demo/ui/screens/test_page.dart';
-imp
+import 'package:flutter_demo/ui/screens/menu_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -33,7 +31,7 @@ class HomePage extends StatelessWidget {
                 Navigator.push( 
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const TestPage(),
+                    builder: (context) => const MenuPage(),
                   ),
                 );
                 ScaffoldMessenger.of(context).showSnackBar(

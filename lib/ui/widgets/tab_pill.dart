@@ -17,7 +17,7 @@ class TabPill extends StatelessWidget {
 
   @override
   Widget build(BuildContext context){
-    const red = const Color(0xFF8B1E04);
+    const red = Color(0xFF8B1E04);
 
     return GestureDetector(
       onTap: onTap,

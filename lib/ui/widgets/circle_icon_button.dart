@@ -24,13 +24,13 @@ class CircleIconButton extends StatelessWidget{
           shape: BoxShape.circle,
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.06),
+              color: Color.fromRGBO(0, 0, 0, 0.06),
               blurRadius: 6,
               offset: const Offset(0, 2),
             ),
           ],
         ),
-        child: Icon(icon, color: const Color.fromARGB(255, 255, 255, 255)),
+        child: Icon(icon, color: Colors.black),
       ),
     );
   }
