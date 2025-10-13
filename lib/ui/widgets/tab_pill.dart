@@ -1,5 +1,6 @@
 // Draw a pill-shaped tab button that can show the progress's records or projects's records
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class TabPill extends StatelessWidget {
   final String text;
@@ -18,23 +19,25 @@ class TabPill extends StatelessWidget {
   @override
   Widget build(BuildContext context){
     const red = Color(0xFF8B1E04);
+    const grayText = Color(0xFF5A5A5A);
+    const grayLight = Color(0xFFF5F5F5);
 
     return GestureDetector(
       onTap: onTap,
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 180),
-        padding: const EdgeInsets.symmetric(vertical: 10),
-        alignment: Alignment.center,
+        padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 8),
+        // alignment: Alignment.center,
         decoration: BoxDecoration(
           color: active ? red : Colors.transparent,
-          borderRadius: BorderRadius.circular(20),
-          border: Border.all(color: red),
+          borderRadius: BorderRadius.circular(30),
         ),
         child: Text(
           text,
-          style: TextStyle (
-            fontWeight: FontWeight.bold,
-            color: active ? Colors.white : red,
+          style: GoogleFonts.montserrat (
+            fontSize: 13,
+            fontWeight: active ? FontWeight.bold : FontWeight.w500,
+            color: active ? grayLight : grayText,
           ),
         ),
       ),

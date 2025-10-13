@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/ui/screens/menu_page.dart';
+import 'package:flutter_demo/ui/screens/menu.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

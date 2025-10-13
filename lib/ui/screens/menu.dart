@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../widgets/circle_icon_button.dart'; 
 import '../widgets/tab_pill.dart';
 import '../widgets/cards/project_list.dart';
-import '../widgets/cards/progress_list.dart';
+import '../widgets/cards/lista_avances.dart';
 
 class MenuPage extends StatefulWidget {
   const MenuPage({super.key});
@@ -12,11 +12,7 @@ class MenuPage extends StatefulWidget {
 }
 
 class _ProgressPage extends State<MenuPage> {
-  int sel = 1; // 0 proyectos, 1 avances
-
-  // Simulación de datos para proyectos y avances
-  final List<String> proyectos = ['Proyecto 1', 'Proyecto 2'];
-  final List<String> avances = ['Avance 1', 'Avance 2', 'Avance 3'];
+  int sel = 0; // 0 proyectos, 1 avances,
 
   @override
   Widget build(BuildContext context) {
@@ -63,12 +59,23 @@ class _ProgressPage extends State<MenuPage> {
                       onTap: () => setState(() => sel = 0)
                     ),
                   ),
+                  Expanded (
+                    child: TabPill(
+                      text: 'Avances',
+                      active: sel == 1,
+                      onTap: () => setState(() => sel = 1)
+                    ),
+                  ),
+
+
+
                   const SizedBox(width: 8),
                   CircleIconButton(
                     icon: Icons.add,
                     onTap: () {
+                      final msg = sel == 0 ? 'Nuevo proyecto' : 'Nuevo avance';
                       ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text('Nuevo proyecto')),
+                        SnackBar(content: Text(msg)),
                       );
                     },
                   ),
