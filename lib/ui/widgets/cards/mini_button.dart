@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class MiniBoton extends StatelessWidget {
+class MiniButton extends StatelessWidget {
   final String text;
   final Color color;
   final bool outlined;
   final VoidCallback? onPressed;
 
 
-  const MiniBoton({
+  const MiniButton({
     super.key,
     required this.text,
     required this.color,

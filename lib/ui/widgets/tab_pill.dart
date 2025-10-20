@@ -26,8 +26,8 @@ class TabPill extends StatelessWidget {
       onTap: onTap,
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 180),
-        padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 8),
-        // alignment: Alignment.center,
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        alignment: Alignment.center,
         decoration: BoxDecoration(
           color: active ? red : Colors.transparent,
           borderRadius: BorderRadius.circular(30),

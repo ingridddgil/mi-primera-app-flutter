@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../widgets/circle_icon_button.dart'; 
 import '../widgets/tab_pill.dart';
 import '../widgets/cards/project_list.dart';
-import '../widgets/cards/lista_avances.dart';
+import '../widgets/cards/progress_list.dart';
 
 class MenuPage extends StatefulWidget {
   const MenuPage({super.key});
@@ -52,20 +52,22 @@ class _ProgressPage extends State<MenuPage> {
             children: [
               Row(
                 children: [
-                  Expanded (
-                    child: TabPill(
+                  // Expanded (
+                    // child: 
+                    TabPill(
                       text: 'Proyectos',
                       active: sel == 0,
                       onTap: () => setState(() => sel = 0)
                     ),
-                  ),
-                  Expanded (
-                    child: TabPill(
+                  // ),
+                  // Expanded (
+                    // child: 
+                    TabPill(
                       text: 'Avances',
                       active: sel == 1,
                       onTap: () => setState(() => sel = 1)
                     ),
-                  ),
+                  // ),
 
 
 
